@@ -15,4 +15,14 @@ class Category extends Model
         'avatar',
         'status',
     ];
+
+    public function posts()
+    {
+        return $this->belongsToMany(
+            related:Post::class,
+            table:          'category_post',
+            foreignPivotKey:'category_id',
+            relatedPivotKey: 'post_id'
+        );
+    }
 }

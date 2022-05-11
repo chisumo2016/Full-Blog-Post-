@@ -14,4 +14,15 @@ class Tag extends Model
         'slug',
         'status',
     ];
+
+    public function tags()
+    {
+        return $this->belongsToMany(
+            related: Post::class,
+            table:           'post_tag',
+            foreignPivotKey: 'tag_id',
+            relatedPivotKey: 'post_id'
+        );
+    }
+
 }
