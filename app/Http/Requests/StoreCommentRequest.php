@@ -23,16 +23,6 @@ class StoreCommentRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'body'         => 'required',
-            'slug'          => 'required',
-            'description'   => 'required',
-            'quote'         => 'required',
-            'avatar'        => 'required',
-            'likes'         => 'required',
-            'views'         => 'required',
-            'status'        => 'required',
-            'user_id'        => 'required',
-        ];
+
     }
 }

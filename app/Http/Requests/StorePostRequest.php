@@ -24,9 +24,17 @@ class StorePostRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'         => 'required|unique:posts|max:255',
-            'post_id'        => 'required',
+
+            'body'         => 'required',
+            'slug'          => 'required',
+            'description'   => 'required',
+            'quote'         => 'required',
+            'avatar'        => 'required',
+            'likes'         => 'required',
+            'views'         => 'required',
+            'status'        => 'required',
             'user_id'        => 'required',
+
         ];
     }
 }
