@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Admin;
 use App\Models\Category;
+use App\Models\Comment;
 use App\Models\Post;
 use App\Models\Tag;
 use App\Models\User;
@@ -23,8 +24,9 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create();
         Admin::factory()->create();
         Post::factory(30)->create();
+        Comment::factory(30)->create();
         Category::factory(30)->create();
-        Tag::factory(8)->create(); // Create 8 tags
+        Tag::factory(30)->create(); // Create 8 tags
 
         foreach (Post::all() as $post){
             $random_tags= Tag::all()->random(rand(2,5))->pluck('id')->toArray();

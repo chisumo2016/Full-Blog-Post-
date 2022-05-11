@@ -17,11 +17,11 @@ class CategoryFactory extends Factory
      */
     public function definition()
     {
-        $name = $this->faker->text;
-        $slug = Str::slug($name);
+        //$name = $this->faker->text;
+        //$slug = Str::slug($name);
         return [
-            'name'         =>   $name,
-            'slug'          =>  $slug,
+            'name'          => $this->faker->unique()->word(),
+            'slug'          => $this->faker->unique()->slug(),
             'avatar'        =>  $this->faker->imageUrl(900, 300),
             'status'        =>  'active',
 
