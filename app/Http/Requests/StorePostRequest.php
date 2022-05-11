@@ -25,13 +25,7 @@ class StorePostRequest extends FormRequest
     {
         return [
             'title'         => 'required|unique:posts|max:255',
-            'slug'          => 'required',
-            'description'   => 'required',
-            'quote'         => 'required',
-            'avatar'        => 'required',
-            'likes'         => 'required',
-            'views'         => 'required',
-            'status'        => 'required',
+            'post_id'        => 'required',
             'user_id'        => 'required',
         ];
     }
